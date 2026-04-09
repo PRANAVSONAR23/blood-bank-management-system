@@ -11,12 +11,12 @@ mongoose.connect(process.env.MONGO_URI)
 const seedAdmin = async () => {
   try {
     // Remove existing admin with same email
-    await Admin.deleteMany({ email: "suraj@admin.com" });
+    await Admin.deleteMany({ email: "admin@bbms.com" });
 
     // Create new admin
     const admin = new Admin({
-      name: "Suraj Savle",
-      email: "suraj@admin.com",
+      name: "Pranav Sonar",
+      email: "admin@bbms.com",
       password: "bbms@admin", // will be hashed automatically
       role: "admin",
     });
